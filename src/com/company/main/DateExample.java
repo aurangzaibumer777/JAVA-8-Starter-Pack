@@ -31,9 +31,18 @@ public class DateExample {
 
         getIndependanceDay();
 
+        myBirthday();
+
         formatters();
 
         localTimeExamples();
+    }
+
+    private static void myBirthday() {
+        LocalDate independenceDay = LocalDate.of(1992, Month.AUGUST, 17);
+        DayOfWeek dayOfWeek = independenceDay.getDayOfWeek();
+        System.out.println();
+        System.out.printf("BIRTHDAY :%s \n",dayOfWeek);
     }
 
 
