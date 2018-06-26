@@ -41,6 +41,26 @@ public class BuiltInInterfacesExample {
                 return isEmpty.negate().test(s);
             }
         };
+
+
+        //EX 5
+        System.out.println();
+        System.out.print(isAdult().test(new Employee(5, 22, "M", "Aurangzaib", "Umer")));
+    }
+
+    private static Predicate<Employee> isAdult() {
+
+        Predicate<Employee> predicate = new Predicate<Employee>() {
+            @Override
+            public boolean test(Employee employee) {
+                return employee.getAge() > 21;
+            }
+        };
+
+        predicate = employee -> employee.getAge() > 21;
+
+        //or can be done like this
+        return p -> p.getAge() > 21;
     }
 
     private static void printResult(String type, boolean test) {

@@ -24,7 +24,13 @@ public class StreamExample {
 
         streamReduce(datasource);
 
+        streamIterate(datasource);
 
+
+    }
+
+    private static void streamIterate(List<String> datasource) {
+        datasource.iterator().hasNext();
     }
 
     private static void streamMap(List<String> datasource) {
